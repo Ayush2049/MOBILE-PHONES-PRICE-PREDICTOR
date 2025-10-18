@@ -1,0 +1,15 @@
+﻿# Python
+*.pyc
+__pycache__/
+venv/
+*.pkl
+
+# Node.js
+node_modules/
+package-lock.json
+
+# Data files
+*.csv
+
+# Temp files
+tempCodeRunnerFile.py

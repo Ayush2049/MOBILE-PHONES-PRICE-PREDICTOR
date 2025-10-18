@@ -1,0 +1,524 @@
+/* ================= Page Container ================= */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Subtle background pattern */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(120, 119, 198, 0.03) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(76, 175, 80, 0.02) 0%,
+      transparent 50%
+    );
+  animation: gentleFloat 20s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-10px, -10px) scale(1.02);
+  }
+  66% {
+    transform: translate(10px, 10px) scale(0.98);
+  }
+}
+
+/* ================= Mobile Brand Elements ================= */
+.mobile-brand {
+  position: absolute;
+  width: 120px;
+  height: 200px;
+  opacity: 0.7;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+
+.mobile-left {
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: gentleSway 8s ease-in-out infinite;
+}
+
+.mobile-right {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: gentleSway 8s ease-in-out infinite -4s;
+}
+
+.mobile-device {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.mobile-screen {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.mobile-screen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: gentleShine 6s ease-in-out infinite;
+}
+
+@keyframes gentleSway {
+  0%,
+  100% {
+    transform: translateY(-50%) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-50%) rotate(2deg);
+  }
+}
+
+@keyframes gentleShine {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* ================= Container ================= */
+.price-form-container {
+  max-width: 800px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 50px 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 8px 20px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  animation: smoothSlideIn 1s ease-out;
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+@keyframes smoothSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= Heading ================= */
+.price-form-container h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: #2c3e50;
+  font-weight: 700;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.price-form-container h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4caf50, #3498db);
+  border-radius: 2px;
+  animation: widthGrow 1s ease-out 0.8s both;
+}
+
+@keyframes widthGrow {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 60px;
+    opacity: 1;
+  }
+}
+
+/* ================= Form Grid ================= */
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= Input Group ================= */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 0.6s ease-out both;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+}
+
+/* Stagger animation for input groups */
+.input-group:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.input-group:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.input-group:nth-child(3) {
+  animation-delay: 0.7s;
+}
+.input-group:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.input-group:nth-child(5) {
+  animation-delay: 0.9s;
+}
+.input-group:nth-child(6) {
+  animation-delay: 1s;
+}
+
+/* Labels */
+.input-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+/* Inputs */
+.input-group input {
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 2px solid #e8edf2;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.input-group input:hover {
+  border-color: #bdc3c7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.input-group input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1),
+    0 4px 16px rgba(52, 152, 219, 0.15);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+/* Help Text */
+.input-group small {
+  color: #7f8c8d;
+  font-size: 12px;
+  margin-top: 6px;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+}
+
+.input-group:focus-within small {
+  color: #3498db;
+}
+
+/* ================= Submit Button ================= */
+.price-form-container button {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #4caf50, #3498db);
+  color: white;
+  padding: 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out 1.1s both;
+  letter-spacing: 0.5px;
+  width: 200px;
+  justify-self: center;
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.2);
+}
+
+.price-form-container button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.price-form-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(76, 175, 80, 0.3);
+}
+
+.price-form-container button:hover::before {
+  left: 100%;
+}
+
+.price-form-container button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/* ================= Prediction Box ================= */
+.prediction-box {
+  padding: 20px 25px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  animation: gentleAppear 0.6s ease-out;
+  background: linear-gradient(135deg, #3498db, #2c3e50);
+  position: relative;
+  overflow: hidden;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prediction-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: gentleShine 4s ease-in-out infinite;
+}
+
+.prediction-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes gentleAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ================= Responsive Design ================= */
+@media (max-width: 1200px) {
+  .mobile-brand {
+    width: 100px;
+    height: 160px;
+  }
+
+  .mobile-left {
+    left: 2%;
+  }
+  .mobile-right {
+    right: 2%;
+  }
+}
+
+@media (max-width: 968px) {
+  .mobile-brand {
+    display: none;
+  }
+
+  body {
+    padding: 20px;
+  }
+
+  .price-form-container {
+    width: 95%;
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+    align-items: flex-start;
+  }
+
+  .price-form-container {
+    width: 100%;
+    padding: 35px 25px;
+    margin: 20px 0;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    justify-items: stretch;
+  }
+
+  .input-group {
+    max-width: none;
+  }
+
+  .price-form-container h2 {
+    font-size: 28px;
+    margin-bottom: 35px;
+  }
+
+  .price-form-container button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .price-form-container {
+    padding: 30px 20px;
+    border-radius: 16px;
+  }
+
+  .price-form-container h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .input-group input {
+    padding: 12px 14px;
+  }
+
+  .price-form-container button {
+    padding: 14px 0;
+    font-size: 15px;
+  }
+
+  .prediction-box {
+    font-size: 16px;
+    padding: 18px 20px;
+  }
+}
+
+/* ================= Loading Animation ================= */
+.loading {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: gentleSpin 1s ease-in-out infinite;
+  margin-right: 10px;
+}
+
+@keyframes gentleSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
