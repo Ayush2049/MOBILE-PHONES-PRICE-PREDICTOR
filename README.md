@@ -7,7 +7,7 @@ A **Flask-based REST API** is also provided to make real-time predictions via JS
 
 ---
 
-## 🧠 Project Objective
+
 
 # 📱 Mobile Price Range Prediction
 
@@ -17,6 +17,14 @@ A **Flask-based REST API** is also provided to make real-time predictions via JS
 [![Flask](https://img.shields.io/badge/Flask-2.0+-green.svg)](https://flask.palletsprojects.com/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-latest-orange.svg)](https://scikit-learn.org/)
 [![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red.svg)](https://github.com/Ayush2049)
+
+---
+
+## 🖼️ Project Preview
+
+| Example 1 | Example 2 |
+|------------|------------|
+| ![Example 1](https://github.com/Ayush2049/MOBILE-PHONES-PRICE-PREDICTOR/blob/4647bb89cc227799ce94bc1b12b7e34cbe94e528/project-instances/ex1.png) | ![Example 2](https://github.com/Ayush2049/MOBILE-PHONES-PRICE-PREDICTOR/blob/4647bb89cc227799ce94bc1b12b7e34cbe94e528/project-instances/ex2.png) |
 
 ---
 
