@@ -32,14 +32,6 @@ A **Flask-based REST API** is also provided to make real-time predictions via JS
 
 This project implements a **Random Forest Classifier** to predict mobile phone price ranges based on technical specifications. The model categorizes phones into four distinct price categories using features like RAM, battery capacity, processor speed, and camera quality.
 
-### Price Categories
-
-| Category | Label | Description |
-|----------|-------|-------------|
-| 💰 | 0 | Low Cost |
-| 💳 | 1 | Medium Cost |
-| 💎 | 2 | High Cost |
-| 👑 | 3 | Very High Cost |
 
 ---
 
@@ -67,6 +59,10 @@ MOBILE-PRICE-PREDICTION/
 ├── 📦 requirements.txt        # Python dependencies
 └── 📖 README.md               # Documentation
 ```
+
+---
+
+## 📂 Dataset link : https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification
 
 ---
 
@@ -116,26 +112,6 @@ numpy>=1.21.0
 
 ---
 
-## 🎓 Training the Model
-
-Execute the training script to build and save the model:
-```bash
-python train_model.py
-```
-
-**Training Process:**
-
-1. ✅ Loads training data from `train.csv`
-2. ✅ Preprocesses features and removes unnecessary columns
-3. ✅ Trains Random Forest Classifier
-4. ✅ Validates model performance
-5. ✅ Generates predictions for test data
-6. ✅ Saves model as `model.pkl`
-7. ✅ Exports results to `submission.csv`
-
-
-
----
 
 ## 🌐 Running the Flask API
 
@@ -179,17 +155,6 @@ python app.py
 ---
 
 
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. 🍴 Fork the repository
-2. 🌿 Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. 💾 Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. 📤 Push to the branch (`git push origin feature/AmazingFeature`)
-5. 🔁 Open a Pull Request
-
----
 
 ## 👨‍💻 Author
 
