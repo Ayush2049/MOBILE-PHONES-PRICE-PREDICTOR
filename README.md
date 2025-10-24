@@ -152,33 +152,6 @@ python app.py
 🌐 Deploy Flask API
 ```
 
----
-
-
-
-## 👨‍💻 Author
-
-**Ayush Sharma**
-
-- 📧 Email: [dm.ayushsharma@gmail.com](mailto:dm.ayushsharma@gmail.com)
-- 🐙 GitHub: [@Ayush2049](https://github.com/Ayush2049)
-- 💼 LinkedIn: [Ayush Sharma](https://in.linkedin.com/in/ayush-sharma-8805842ba)
-
----
-
-## 📄 License
-
-**All Rights Reserved © [Ayush2049](https://github.com/Ayush2049)**
-
-This project and its contents are proprietary. Unauthorized copying, distribution, or modification of this project, via any medium, is strictly prohibited without explicit permission from the author.
-
----
-
-## 🙏 Acknowledgments
-
-- Dataset provided by Kaggle's Mobile Price Classification Challenge
-- Built with scikit-learn and Flask frameworks
-- Inspired by real-world mobile pricing strategies
 
 ---
 
